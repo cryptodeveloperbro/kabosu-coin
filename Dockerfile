@@ -193,7 +193,7 @@ VOLUME /home/arqma/.arqma
 
 # Generate your wallet via accessing the container and run:
 # cd /wallet
-# pepeprivate-wallet-cli
+# kabosuprivate-wallet-cli
 VOLUME /wallet
 
 EXPOSE 18993
@@ -202,4 +202,4 @@ EXPOSE 18994
 # switch to user arqma
 USER arqma
 
-ENTRYPOINT ["pepeprivate", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=18993", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=18994", "--non-interactive", "--confirm-external-bind"]
+ENTRYPOINT ["kabosuprivate", "--p2p-bind-ip=0.0.0.0", "--p2p-bind-port=18993", "--rpc-bind-ip=0.0.0.0", "--rpc-bind-port=18994", "--non-interactive", "--confirm-external-bind"]

@@ -1,4 +1,4 @@
-// Copyright (c) 2019-2022, The PepePrivate Network
+// Copyright (c) 2019-2022, The KabosuPrivate Network
 // Copyright (c) 2018-2019, The Arqma Network
 // Copyright (c) 2014-2018, The Monero Project
 //
@@ -165,7 +165,7 @@ namespace cryptonote
   };
   static const command_line::arg_descriptor<std::string> arg_check_updates = {
     "check-updates"
-  , "Check for new versions of pepeprivate: [disabled|notify|download|update]"
+  , "Check for new versions of kabosuprivate: [disabled|notify|download|update]"
   , "notify"
   };
   static const command_line::arg_descriptor<bool> arg_fluffy_blocks = {
@@ -475,8 +475,8 @@ namespace cryptonote
       if (boost::filesystem::exists(old_files / "blockchain.bin"))
       {
         MWARNING("Found old-style blockchain.bin in " << old_files.string());
-        MWARNING("PepePrivate now uses a new format. You can either remove blockchain.bin to start syncing");
-        MWARNING("the blockchain anew, or use pepeprivate-blockchain-export and pepeprivate-blockchain-import to");
+        MWARNING("KabosuPrivate now uses a new format. You can either remove blockchain.bin to start syncing");
+        MWARNING("the blockchain anew, or use kabosuprivate-blockchain-export and kabosuprivate-blockchain-import to");
         MWARNING("convert your existing blockchain.bin to the new format. See README.md for instructions.");
         return false;
       }
@@ -1654,7 +1654,7 @@ namespace cryptonote
      {
        std::string main_message;
        if (m_offline)
-        main_message = "The daemon is running offline and will not attempt to sync to the PepePrivate Network.";
+        main_message = "The daemon is running offline and will not attempt to sync to the KabosuPrivate Network.";
       else
         main_message = "The daemon will start synchronizing with the network. This may take a long time to complete.";
     MGINFO_CYAN(ENDL <<
@@ -1741,7 +1741,7 @@ namespace cryptonote
   //-----------------------------------------------------------------------------------------------
   bool core::check_updates()
   {
-    static const char software[] = "pepeprivate";
+    static const char software[] = "kabosuprivate";
 #ifdef BUILD_TAG
     static const char buildtag[] = BOOST_PP_STRINGIZE(BUILD_TAG);
 //    static const char subdir[] = "cli"; // because it can never be simple

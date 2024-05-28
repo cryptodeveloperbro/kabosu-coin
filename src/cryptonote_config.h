@@ -1,4 +1,4 @@
-// Copyright (c) 2024 Pepe Private
+// Copyright (c) 2024 Kabosu Private - A Doge Coin Privacy Coin
 // Copyright (c) 2018-2019, The Arqma Network 
 // Copyright (c) 2014-2018, The Monero Project
 //
@@ -51,7 +51,7 @@
 #define BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V9            BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW_V2
 
 // MONEY_SUPPLY - total number coins to be generated
-#define MONEY_SUPPLY                                    ((uint64_t)21000000000000000)
+#define MONEY_SUPPLY                                    ((uint64_t)100000000000000000000)
 #define EMISSION_SPEED_FACTOR_PER_MINUTE                (20)
 #define EMISSION_SPEED_FACTOR_V16                       (20)
 #define FINAL_SUBSIDY_PER_MINUTE                        ((uint64_t)300000000)
@@ -155,7 +155,7 @@
 
 #define ALLOW_DEBUG_COMMANDS
 
-#define CRYPTONOTE_NAME                                 "pepeprivate"
+#define CRYPTONOTE_NAME                                 "kabosuprivate"
 #define CRYPTONOTE_POOLDATA_FILENAME                    "poolstate.bin"
 #define CRYPTONOTE_BLOCKCHAINDATA_FILENAME              "data.mdb"
 #define CRYPTONOTE_BLOCKCHAINDATA_LOCK_FILENAME         "lock.mdb"
@@ -203,48 +203,48 @@ namespace config
    uint64_t const BASE_REWARD_CLAMP_THRESHOLD = ((uint64_t)100000);
    std::string const P2P_REMOTE_DEBUG_TRUSTED_PUB_KEY = "0000000000000000000000000000000000000000000000000000000000000000";
 
-   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x2cb404; // Wallet prefix: PEPE
-   uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x1bec3404; // Wallet prefix: PEPEP
-   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x26b6c3404; // Wallet prefix: PEPEPV
-   uint16_t const P2P_DEFAULT_PORT = 16993;
-   uint16_t const RPC_DEFAULT_PORT = 16994;
-   uint16_t const ZMQ_DEFAULT_PORT = 17995;
+   uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0xaf2a4cd488cf; // Wallet prefix: bigkabosu
+   uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0xaccd488cf; // Wallet prefix: bigkab
+   uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x2724cd488cf; // Wallet prefix: bigkabo
+   uint16_t const P2P_DEFAULT_PORT = 15993;
+   uint16_t const RPC_DEFAULT_PORT = 15994;
+   uint16_t const ZMQ_DEFAULT_PORT = 16995;
    boost::uuids::uuid const NETWORK_ID = { {
-       0x12, 0x14, 0x11, 0x12, 0xF7, 0xF7, 0xF7, 0x07, 0x07, 0x07, 0xF7, 0xF7, 0xF8, 0x16, 0x16, 0x1A
+       0x17, 0x17, 0x77, 0x17, 0xF7, 0xF7, 0xF7, 0x07, 0x07, 0x07, 0xF7, 0xF7, 0xF7, 0x77, 0x77, 0x7A
      } }; //
-   std::string const GENESIS_TX = "021201ff0001c4f0d8cd4a0237b6e742fab891050ee522adebd98393e360e7dc17082b6ce40ffeb17852be62210117cf1ca1d618b1d001dcc54cdf25207da112030d711f48e87a2b38136bab3a5c00";
-   uint32_t const GENESIS_NONCE = 17993;
+   std::string const GENESIS_TX = "";
+   uint32_t const GENESIS_NONCE = 16993;
 
    namespace testnet
    {
-     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0xc8c3404; // Wallet prefix: at... // decimal prefix: PEPEA
-     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0xdac3404; // Wallet prefix: ati... // decimal prefix: PEPEB
-     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0xecc3404; // Wallet prefix: ats... // decimal prefix: PEPEC
-     uint16_t const P2P_DEFAULT_PORT = 28993;
-     uint16_t const RPC_DEFAULT_PORT = 28994;
-     uint16_t const ZMQ_DEFAULT_PORT = 28995;
+     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x72a4cd488cf; // Wallet prefix: at... // decimal prefix: bigkabos
+     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x34c8cf; // Wallet prefix: ati... // decimal prefix: bigk
+     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x1d5488cf; // Wallet prefix: ats... // decimal prefix: bigka
+     uint16_t const P2P_DEFAULT_PORT = 27993;
+     uint16_t const RPC_DEFAULT_PORT = 27994;
+     uint16_t const ZMQ_DEFAULT_PORT = 27995;
      boost::uuids::uuid const NETWORK_ID = { {
-         0x12, 0x12, 0x12, 0x15, 0xF2, 0xF1, 0xF0, 0x15, 0x14, 0x12, 0xF4, 0xF5, 0xF3, 0x12, 0x12, 0x1B
+         0x66, 0x66, 0x66, 0x16, 0xF6, 0xF6, 0xF6, 0x16, 0x16, 0x16, 0xF6, 0xF5, 0xF3, 0x12, 0x12, 0x1B
        } }; // Bender's daydream
    }
 
    namespace stagenet
    {
-     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x28c3404; // Wallet prefix: as... // decimal prefix: PEPE1
-     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x3ac3404; // Wallet prefix: asi... // decimal prefix: PEPE2
-     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x4cc3404; // Wallet prefix: ass... // decimal prefix: PEPE3
-     uint16_t const P2P_DEFAULT_PORT = 38993;
-     uint16_t const RPC_DEFAULT_PORT = 38994;
-     uint16_t const ZMQ_DEFAULT_PORT = 38995;
+     uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x93848cf; // Wallet prefix: as... // decimal prefix: bigsk
+     uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x3848cf; // Wallet prefix: asi... // decimal prefix: bigs
+     uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x3361cf; // Wallet prefix: ass... // decimal prefix: bkab
+     uint16_t const P2P_DEFAULT_PORT = 37993;
+     uint16_t const RPC_DEFAULT_PORT = 37994;
+     uint16_t const ZMQ_DEFAULT_PORT = 37995;
      boost::uuids::uuid const NETWORK_ID = { {
-         0x12, 0x16, 0x19, 0x18, 0xF0, 0xF1, 0xF4, 0x15, 0x16, 0x12, 0xF0, 0xF4, 0xF5, 0x12, 0x15, 0x1C
+         0x55, 0x55, 0x19, 0x18, 0xF0, 0xF5, 0xF5, 0x15, 0x16, 0x55, 0xF5, 0xF5, 0xF5, 0x55, 0x15, 0x1C
        } }; // Bender's daydream
    }
 
    namespace blockchain_settings
    {
      const uint64_t PREMINE_BURN = 0; // 
-     const uint64_t MONEY_PREMINE = 3000000000000000; // 
+     const uint64_t MONEY_PREMINE = 5000000000000000000; // 
      const uint64_t MAXIMUM_BLOCK_SIZE_LIMIT = 2 * 1024 * 1024; // It is set to 2048kB (2MB)
      const uint64_t MINIMUM_BLOCK_SIZE_LIMIT = 1 * 1024 * 1024; // It is set to 1024kB (1MB)
      const uint8_t ARQMA_GENESIS_BLOCK_MAJOR_VERSION = 1;
@@ -255,7 +255,7 @@ namespace config
    namespace tx_settings
    {
      const uint8_t ARQMA_TX_CONFIRMATIONS_REQUIRED = 4; // How many blocks are needed to confirm transaction sent.
-     const uint8_t ARQMA_TX_VERSION = 2; // Current Transaction Version Valid on PepePrivate Network
+     const uint8_t ARQMA_TX_VERSION = 2; // Current Transaction Version Valid on KabosuPrivate Network
      const uint64_t TRANSACTION_SIZE_LIMIT = 48 * 1024; // I did set it to 48kB for now but it need to be verified.
      const uint64_t MAX_TRANSACTIONS_IN_BLOCK = 1024; // Maximum allowed transactions in One Block
    }
@@ -269,7 +269,7 @@ namespace config
 
    namespace governance
    {
-	 static constexpr const char* MAINNET_WALLET_ADDRESS = "PEPExfioeNb31S5tsPXh7GWRfykqppYdLJLBnRMZDj3McJ3Ba13ftrfTHZLCYyNjRg7ksEmK8X2GoXNUHCsdLK3QgiNpy6WWdgj";
+	 static constexpr const char* MAINNET_WALLET_ADDRESS = "";
      static constexpr const char* TESTNET_WALLET_ADDRESS = "";
      static constexpr const char* STAGENET_WALLET_ADDRESS = "";
    }

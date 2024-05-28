@@ -51,5 +51,5 @@ add_dependencies(gen_multisig
   version)
 set_property(TARGET gen_multisig
   PROPERTY
-    OUTPUT_NAME "pepeprivate-generate-trusted-multisig-wallets")
+    OUTPUT_NAME "kabosuprivate-generate-trusted-multisig-wallets")
 install(TARGETS gen_multisig DESTINATION bin)

@@ -36,7 +36,7 @@
 
 namespace daemon_args
 {
-  std::string const WINDOWS_SERVICE_NAME = "PepePrivate Network Node";
+  std::string const WINDOWS_SERVICE_NAME = "KabosuPrivate Network Node";
 
   const command_line::arg_descriptor<std::string, false, true, 2> arg_config_file = {
     "config-file"
@@ -105,13 +105,13 @@ namespace daemon_args
   
   const command_line::arg_descriptor<bool> arg_public_node = {
     "public-node"
-  , "Allow PepePrivate Network Users to use this PepePrivate Node as a Remote-Node (restricted RPC mode, view-only commands) and advertise it over P2P Network Protocol"
+  , "Allow KabosuPrivate Network Users to use this KabosuPrivate Node as a Remote-Node (restricted RPC mode, view-only commands) and advertise it over P2P Network Protocol"
   , false
   };
 
   const command_line::arg_descriptor<bool> arg_zmq_enabled = {
     "zmq-enabled"
-  , "Enable PepePrivate ZMQ server"
+  , "Enable KabosuPrivate ZMQ server"
   , false
   };
 
@@ -123,7 +123,7 @@ namespace daemon_args
 
   const command_line::arg_descriptor<std::string> arg_zmq_bind_ip = {
     "zmq-bind-ip"
-  , "IP Address for PepePrivate ZMQ server to bind on"
+  , "IP Address for KabosuPrivate ZMQ server to bind on"
   , "127.0.0.1"
   };
 

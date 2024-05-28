@@ -64,5 +64,5 @@ target_link_libraries(simplewallet
     ${EXTRA_LIBRARIES})
 set_property(TARGET simplewallet
   PROPERTY
-    OUTPUT_NAME "pepeprivate-wallet-cli")
+    OUTPUT_NAME "kabosuprivate-wallet-cli")
 install(TARGETS simplewallet DESTINATION bin)

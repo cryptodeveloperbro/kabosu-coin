@@ -1,5 +1,5 @@
-#PepePrivate build script for linux
-#Copyrights PepePrivate Network 2023
+#KabosuPrivate build script for linux
+#Copyrights KabosuPrivate Network 2023
 
 #Install dependences
 sudo apt update && sudo apt install --yes git build-essential curl pkg-config libssl-dev libsodium-dev libunwind-dev liblzma-dev libreadline-dev libldns-dev libexpat1-dev doxygen graphviz libudev-dev libusb-1.0-0-dev libhidapi-dev xsltproc gperf autoconf automake libtool-bin
@@ -23,9 +23,9 @@ sudo ./b2 install
 sudo ./b2 headers
 cd ..
 
-#Build pepeprivate from source
-git clone https://github.com/PepePrivateNetwork/pepeprivate --recursive
-cd pepeprivate
+#Build kabosuprivate from source
+git clone https://github.com/KabosuPrivateNetwork/kabosuprivate --recursive
+cd kabosuprivate
 git submodule init
 git submodule update
 cmake .

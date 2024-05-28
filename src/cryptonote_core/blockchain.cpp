@@ -1,4 +1,4 @@
-// Copyright (c) 2019-2022, The PepePrivate Network
+// Copyright (c) 2019-2022, The KabosuPrivate Network
 // Copyright (c) 2018-2019, The Arqma Network
 // Copyright (c) 2014-2018, The Monero Project
 //
@@ -480,7 +480,7 @@ bool Blockchain::init(BlockchainDB* db, const network_type nettype, bool offline
     }
     catch( const std::exception& e)
     {
-      MERROR(std::string("Failed to construct PepePrivate notifier ") + e.what());
+      MERROR(std::string("Failed to construct KabosuPrivate notifier ") + e.what());
     }
  }
 
@@ -626,7 +626,7 @@ block Blockchain::pop_block_from_blockchain()
   block popped_block;
   std::vector<transaction> popped_txs;
 
-  CHECK_AND_ASSERT_THROW_MES(m_db->height() > 1, "It is forbidden to remove PepePrivate Genesis Block.");
+  CHECK_AND_ASSERT_THROW_MES(m_db->height() > 1, "It is forbidden to remove KabosuPrivate Genesis Block.");
 
   try
   {
@@ -3733,7 +3733,7 @@ leave:
     const el::Level level = el::Level::Warning;
     MCLOG_RED(level, "global", "**********************************************************************");
     MCLOG_RED(level, "global", "A block was seen on the network with a version higher than the last");
-    MCLOG_RED(level, "global", "known one. This may be an old version of the PepePrivate daemon, and a software");
+    MCLOG_RED(level, "global", "known one. This may be an old version of the KabosuPrivate daemon, and a software");
     MCLOG_RED(level, "global", "update may be required to sync further. ");
     MCLOG_RED(level, "global", "**********************************************************************");
   }
@@ -4094,7 +4094,7 @@ leave:
     }
     catch( const std::exception& e)
     {
-      MERROR(std::string("Failed to construct pepeprivate block producer") + e.what());
+      MERROR(std::string("Failed to construct kabosuprivate block producer") + e.what());
     }
   }
 
@@ -4299,7 +4299,7 @@ void Blockchain::check_against_checkpoints(const checkpoints& points, bool enfor
       }
       else
       {
-        LOG_ERROR("WARNING: local blockchain failed to pass a PepePrivate Network checkpoint, and you could be on a fork. You should either sync up from scratch, OR download a fresh blockchain bootstrap, OR enable checkpoint enforcing with the --enforce-dns-checkpointing command-line option");
+        LOG_ERROR("WARNING: local blockchain failed to pass a KabosuPrivate Network checkpoint, and you could be on a fork. You should either sync up from scratch, OR download a fresh blockchain bootstrap, OR enable checkpoint enforcing with the --enforce-dns-checkpointing command-line option");
       }
     }
   }

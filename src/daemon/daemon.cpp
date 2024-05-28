@@ -187,20 +187,20 @@ bool t_daemon::run(bool interactive)
         return false;
       }
 
-      MINFO("Starting PepePrivate ZMQ server...");
+      MINFO("Starting KabosuPrivate ZMQ server...");
 
       if(!arqmaNotifier.addTCPSocket(zmq_ip_str, zmq_port_str, zmq_max_clients))
       {
-        LOG_ERROR(std::string("Failed to add TCP Socket (") << zmq_ip_str + ":" << zmq_port_str + ") to PepePrivate ZMQ Server");
+        LOG_ERROR(std::string("Failed to add TCP Socket (") << zmq_ip_str + ":" << zmq_port_str + ") to KabosuPrivate ZMQ Server");
         return false;
       }
 
       arqmaNotifier.run();
 
-      MGINFO_GREEN(std::string("PepePrivate ZMQ server started at ") << zmq_ip_str + ":" << zmq_port_str << " with Maximum Allowed Clients Connections: " << zmq_max_clients << ".");
+      MGINFO_GREEN(std::string("KabosuPrivate ZMQ server started at ") << zmq_ip_str + ":" << zmq_port_str << " with Maximum Allowed Clients Connections: " << zmq_max_clients << ".");
     }
     else
-      MGINFO_GREEN(std::string("PepePrivate ZMQ Server Disabled"));
+      MGINFO_GREEN(std::string("KabosuPrivate ZMQ Server Disabled"));
 
     if (public_rpc_port > 0)
     {
@@ -215,7 +215,7 @@ bool t_daemon::run(bool interactive)
 
     if(zmq_enabled)
     {
-      MGINFO_GREEN(std::string("Stopping PepePrivate ZMQ Server."));
+      MGINFO_GREEN(std::string("Stopping KabosuPrivate ZMQ Server."));
       arqmaNotifier.stop();
     }
 

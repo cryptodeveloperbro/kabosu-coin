@@ -11,9 +11,9 @@ RuntimeDirectory=arqma
 # Clearnet config
 #
 Type=forking
-PIDFile=/run/arqma/pepeprivate.pid
-ExecStart=/usr/bin/pepeprivate --config-file /etc/pepeprivate.conf \
-    --detach --pidfile /run/arqma/pepeprivate.pid
+PIDFile=/run/arqma/kabosuprivate.pid
+ExecStart=/usr/bin/kabosuprivate --config-file /etc/kabosuprivate.conf \
+    --detach --pidfile /run/arqma/kabosuprivate.pid
 
 # Tor config
 #
@@ -27,7 +27,7 @@ ExecStart=/usr/bin/pepeprivate --config-file /etc/pepeprivate.conf \
 ## host in the LAN, VPN, etc, the RPC must bind to 0.0.0.0, but
 ## by default torsocks only allows binding to localhost.
 #Environment=TORSOCKS_ALLOW_INBOUND=1
-#ExecStart=/usr/bin/torsocks /usr/bin/pepeprivate --config-file /etc/pepeprivate.conf \
+#ExecStart=/usr/bin/torsocks /usr/bin/kabosuprivate --config-file /etc/kabosuprivate.conf \
 #    --non-interactive
 
 Restart=always

@@ -13,16 +13,16 @@ See also each utility's "--help" option.
 
 ### Export an existing blockchain database
 
-`$ pepeprivate-blockchain-export`
+`$ kabosuprivate-blockchain-export`
 
 This loads the existing blockchain and exports it to `$ARQMA_DATA_DIR/export/blockchain.raw`
 
 ### Import the exported file
 
-`$ pepeprivate-blockchain-import`
+`$ kabosuprivate-blockchain-import`
 
 This imports blocks from `$ARQMA_DATA_DIR/export/blockchain.raw` (exported using the
-`pepeprivate-blockchain-export` tool as described above) into the current database.
+`kabosuprivate-blockchain-export` tool as described above) into the current database.
 
 Defaults: `--batch on`, `--batch size 20000`, `--verify on`
 
@@ -31,14 +31,14 @@ Batch size refers to number of blocks and can be adjusted for performance based 
 Verification should only be turned off if importing from a trusted blockchain.
 
 If you encounter an error like "resizing not supported in batch mode", you can just re-run
-the `pepeprivate-blockchain-import` command again, and it will restart from where it left off.
+the `kabosuprivate-blockchain-import` command again, and it will restart from where it left off.
 
 ```bash
 ## use default settings to import blockchain.raw into database
-$ pepeprivate-blockchain-import
+$ kabosuprivate-blockchain-import
 
 ## fast import with large batch size, database mode "fastest", verification off
-$ pepeprivate-blockchain-import --batch-size 20000 --database lmdb#fastest --verify off
+$ kabosuprivate-blockchain-import --batch-size 20000 --database lmdb#fastest --verify off
 
 ```
 
@@ -81,9 +81,9 @@ LMDB flags (more than one may be specified):
 ## Examples:
 
 ```
-$ pepeprivate-blockchain-import --database lmdb#fastest
+$ kabosuprivate-blockchain-import --database lmdb#fastest
 
-$ pepeprivate-blockchain-import --database lmdb#nosync
+$ kabosuprivate-blockchain-import --database lmdb#nosync
 
-$ pepeprivate-blockchain-import --database lmdb#nosync,nometasync
+$ kabosuprivate-blockchain-import --database lmdb#nosync,nometasync
 ```

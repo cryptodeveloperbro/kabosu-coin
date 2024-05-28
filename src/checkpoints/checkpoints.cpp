@@ -162,7 +162,13 @@ namespace cryptonote
   {
     if (nettype == TESTNET)
     {
-      ADD_CHECKPOINT(0, "e779e5d132d7c9967b0eca089534abe9662d870967de6dd4009cdc2b6d66ba3d");
+      ADD_CHECKPOINT(0, "e779e5d132d7c9967b0eca089534abe9662d870967de6dd4009cdc2b6d66ba3d")
+	  ADD_CHECKPOINT(1, "47e582106587b9dd1ec64ec9efc0e33552d00ac79a0dd33ec99656d95854762e");
+    ADD_CHECKPOINT(2500, "8e300049c8e77e60cad4a673c7f9fce365120f61922e2a584ce7e1532780aea2");
+    ADD_CHECKPOINT(10000, "3e47a614705cdf560b5699488ff213cf8713f6d7303360e2b6ccb8e900000000");
+    
+	  
+	  ;
       return true;
     }
     if (nettype == STAGENET)
@@ -171,14 +177,6 @@ namespace cryptonote
       return true;
     }
     ADD_CHECKPOINT(0, "e779e5d132d7c9967b0eca089534abe9662d870967de6dd4009cdc2b6d66ba3d");
-	ADD_CHECKPOINT(1, "47e582106587b9dd1ec64ec9efc0e33552d00ac79a0dd33ec99656d95854762e");
-    ADD_CHECKPOINT(2500, "8e300049c8e77e60cad4a673c7f9fce365120f61922e2a584ce7e1532780aea2");
-    ADD_CHECKPOINT(10000, "5c3b3adccb399900f74a0fc6635ef836244c24e41cfc9520fa76b3056aa6a9c2");
-	ADD_CHECKPOINT(20000, "3048fe33473a7a427cbd67d0d9827ffd09303b8a5cc83662338b2562c3a77989");
-	ADD_CHECKPOINT(30000, "7604247ad354cff01015cafa5a84e1d229bd18389ef89c95bbab17716eb506f4");
-	ADD_CHECKPOINT(40000, "5da1bff276e923a0eb7bd840b056979cc2841213bf5990f39ea5c9b55a055562");
-	ADD_CHECKPOINT(45000, "2de81d3cc2f3fe573bb6248dd16e71669dce034f76166dd420cc4f5abf5d3348");
-	
     
     return true;
   }
@@ -224,8 +222,8 @@ namespace cryptonote
     std::vector<std::string> records;
 
 	return false;
-    // All four Pepe Private Network domains have DNSSEC on and valid
-    static const std::vector<std::string> dns_urls = { };//TODO "checkpoints.pepeprivate.pl" };
+    // All four Kabosu Private Network domains have DNSSEC on and valid
+    static const std::vector<std::string> dns_urls = { };//TODO "checkpoints.kabosuprivate.pl" };
 
     static const std::vector<std::string> testnet_dns_urls = {
     };
