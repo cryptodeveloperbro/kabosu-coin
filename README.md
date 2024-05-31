@@ -12,6 +12,7 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 - Mail: admin@kabosuprivate.com
 - [GitHub: https://github.com/cryptodeveloperbro/kabosu-coin
 - Telegram: https://t.me/kabosuprivatecoin
+- Pool: http://75.119.138.68/TSK1/  (Miner Galaxy)
 - Matrix chat: 
 
 ## Other Kabosuprivate related websites
