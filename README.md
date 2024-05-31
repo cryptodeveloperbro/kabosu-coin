@@ -8,10 +8,10 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 
 ## Development resources
 
-- Web: http://kabosuprivate.com/
+- Web: https://kabosucoin.org/
 - Mail: admin@kabosuprivate.com
 - [GitHub: https://github.com/cryptodeveloperbro/kabosu-coin
-- Telegram: https://t.me/pepeprivatecoin
+- Telegram: https://t.me/kabosuprivatecoin
 - Matrix chat: 
 
 ## Other Kabosuprivate related websites
@@ -163,11 +163,11 @@ Install all dependencies at once on OSX:
 
 Clone recursively to pull-in needed submodule(s):
 
-`$ git clone https://github.com/cryptodeveloperbro/kabosu-coin`
+`$ git clone https://github.com/cryptodeveloperbro/kabosu-coin
 
 If you already have a repo cloned, initialize and update:
 
-`$ cd kabosuprivate && git checkout`
+`$ cd kabosu-coin && git checkout`
 `$ git submodule init && git submodule update`
 
 ### Build instructions
@@ -181,7 +181,7 @@ invokes cmake commands as needed.
 
 * Change to the root of the source code directory and build:
 
-	`$ cd kabosuprivate && make release`
+	`$ cd kabosu-coin && make release or do make -j 2`
 
 	*Optional*: If your machine has several cores and enough memory, enable parallel build by running `make -j<number of threads>` instead of `make`. For this to be worthwhile, the machine should have one core and about 2GB of RAM available per thread.
 
