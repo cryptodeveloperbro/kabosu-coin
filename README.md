@@ -20,7 +20,8 @@ NEEDS UPDATE
 
 ## Kabosuprivate Social-Media Websites
 
-- Kabosu Private X: https://twitter.com/roboticoai
+- Kabosu Private Dev X: https://twitter.com/roboticoai
+- BitcoinTalk: https://bitcointalk.org/index.php?topic=5498390.msg64150264#msg64150264
 
 ## Kabosuprivate Exchange Websites
 
@@ -229,7 +230,7 @@ Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (
 * Clone kabosuprivate and checkout most recent release version:
 
 	`$ git clone https://github.com/cryptodeveloperbro/kabosu-coin`
-	`$ cd kabosuprivate`
+	`$ cd kabosu-coin`
 
 * Build:
 
@@ -315,7 +316,7 @@ application.
 
 * Change branch to last Release:
 
-	`$ cd kabosuprivate && git checkout release-v0.6.1`
+	`$ cd kabosu-coin && git checkout`
 
 * Activate and update submodules:
 
